@@ -105,7 +105,7 @@ Hello, Taro
   - `python -m day01.app`（名前を入れないで実行してみた）
 - 発生したエラーと対処：
   - 名前を入れずに実行した際、`error: the following arguments are required: --name` とエラーが出て、名前が必須であることが確認できた。
-  - repeatに11を指定した際、`ERROR --repeat must be between 1 and 10` とエラーが出て、1〜10の範囲外は防がれることを確認した。
+  - repeatに11を指定した際、`ERROR --repeat must be between 1 and 10` とエラーが出て、1〜10の範囲外は防がれることを確認した。　
 
 ## 提出物
 
