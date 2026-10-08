@@ -100,7 +100,12 @@ Hello, Taro
 **以下は受講者が記入してください**
 
 - 追加で確認した入力例：
+  - `python -m day01.app --name "NagainamaenoObake-12345"`（長い名前でも動くか確認）
+  - `python -m day01.app --name "Taro" --repeat 11`（10回を超える数字を入れてみた）
+  - `python -m day01.app`（名前を入れないで実行してみた）
 - 発生したエラーと対処：
+  - 名前を入れずに実行した際、`error: the following arguments are required: --name` とエラーが出て、名前が必須であることが確認できた。
+  - repeatに11を指定した際、`ERROR --repeat must be between 1 and 10` とエラーが出て、1〜10の範囲外は防がれることを確認した。
 
 ## 提出物
 
@@ -111,7 +116,7 @@ Hello, Taro
 
 - 正常系：`--name Taro` で期待どおりに表示される
 - 異常系：`--name` 未指定でエラーになり、メッセージが分かりやすい
-- 境界：`--name` に長い文字列や記号を入れても壊れない
+- 境界：`--name` に長い文字列や記号を入れても壊れない（（NagainamaenoObake-12345）で確認）
 - 再実行：同じ入力で複数回実行しても安定して同じ結果になる
 
 ## リサーチメモ（任意）
@@ -123,3 +128,6 @@ Hello, Taro
 - CLIの引数処理（例：argparse等）
 - ログ（INFO/ERRORの使い分け）
 - GitHub：ブランチ作成→PR→修正push
+- Mac環境での対応：Windowsの手順（.venv\Scripts\activate）の代わりに、Mac用のコマンド（source .venv/bin/activate）で仮想環境を起動した。
+- venvの理解：Mac本体の環境を変えずに、この研修専用の安全な部屋を作って道具を管理する仕組みだと理解した。
+- 終了コードの確認：正常に動いたときは0、入力ミスなどは2が返ってくることを確認した。
